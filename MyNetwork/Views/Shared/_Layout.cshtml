@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+
+
+    <!-- VENDOR CSS -->
+    @Styles.Render("~/UI/assets/vendor/bootstrap/css/bootstrap.min.css")
+    @Styles.Render("~/UI/assets/vendor/font-awesome/css/font-awesome.min.css")
+    @Styles.Render("~/UI/assets/vendor/linearicons/style.css")
+  
+    <!-- MAIN CSS -->
+    @Styles.Render("~/UI/assets/css/main.css")
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    @Styles.Render("~/UI/assets/css/demo.css")
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="~/UI/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/UI/assets/img/favicon.png">
+
+</head>
+<body>
+  
+    
+        @RenderBody()
+     
+  
+
+    
+
+</body>
+</html>
