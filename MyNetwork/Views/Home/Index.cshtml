@@ -9,7 +9,7 @@
                             <div class="logo text-center"><img src="../UI/assets/img/logo-dark.png" alt="Klorofil Logo"></div>
                             <p class="lead">Login to your account</p>
                         </div>
-                        @using (Html.BeginForm("Contacts", "Contacts", FormMethod.Post))
+                        @using (Html.BeginForm("Autherize", "Home", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true)
@@ -17,11 +17,11 @@
                             <form class="form-auth-small" action="index.php">
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="samuel.gold@domain.com" placeholder="Email">
+                                    <input type="Email" class="form-control" name="Email" id="signin-email" value="samuel.gold@domain.com" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signin-password" value="thisisthepassword" placeholder="Password">
+                                    <input type="password" class="form-control" name="Password" id="signin-password" value="thisisthepassword" placeholder="Password">
                                 </div>
                                 <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">

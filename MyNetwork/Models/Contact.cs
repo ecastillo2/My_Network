@@ -7,29 +7,30 @@ namespace MyNetwork.Models
 {
     public class Contact
     {
-        private int _ContactID;
-        public int ContactID
+
+        private static string _ContactID;
+        public string ContactID
         {
             get { return _ContactID; }
             set { _ContactID = value; }
         }
 
-        private int _ChildrenID;
-        public int ChildrenID
+        private static string _ChildrenID;
+        public string ChildrenID
         {
             get { return _ChildrenID; }
             set { _ChildrenID = value; }
         }
 
-        private int _SiblingID;
-        public int SiblingID
+        private static string _SiblingID;
+        public string SiblingID
         {
             get { return _SiblingID; }
             set { _SiblingID = value; }
         }
 
-        private DateTime _AddedContactDate;
-        public DateTime AddedContactDate
+        private string _AddedContactDate;
+        public string AddedContactDate
         {
             get { return _AddedContactDate; }
             set { _AddedContactDate = value; }
@@ -56,15 +57,15 @@ namespace MyNetwork.Models
             set { _LastName = value; }
         }
 
-        private int _Age;
-        public int Age
+        private string _Age;
+        public string Age
         {
             get { return _Age; }
             set { _Age = value; }
         }
 
-        private DateTime _Birthday;
-        public DateTime Birthday
+        private string _Birthday;
+        public string Birthday
         {
             get { return _Birthday; }
             set { _Birthday = value; }
@@ -91,6 +92,20 @@ namespace MyNetwork.Models
             set { _WorkPhone = value; }
         }
 
+        private string _Image;
+        public string Image
+        {
+            get { return _Image; }
+            set { _Image = value; }
+        }
+
+        private string _Email;
+        public string Email
+        {
+            get { return _Email; }
+            set { _Email = value; }
+        }
+
         private string _Relationship;
         public string Relationship
         {
@@ -110,6 +125,13 @@ namespace MyNetwork.Models
         {
             get { return _SpouseLastName; }
             set { _SpouseLastName = value; }
+        }
+
+        private string _SalaryRange;
+        public string SalaryRange
+        {
+            get { return _SalaryRange; }
+            set { _SalaryRange = value; }
         }
 
         private string _PrimaryOccupation;
@@ -133,25 +155,25 @@ namespace MyNetwork.Models
             set { _MetLocation = value; }
         }
 
-        private int _NumberOfYearKnown;
-        public int NumberOfYearKnown
+        private string _NumberOfYearKnown;
+        public string NumberOfYearKnown
         {
             get { return _NumberOfYearKnown; }
             set { _NumberOfYearKnown = value; }
         }
 
-        private DateTime _LastSpokeToDate;
-        public DateTime LastSpokeToDate
+        private string _LastSpokeToDate;
+        public string LastSpokeToDate
         {
             get { return _LastSpokeToDate; }
             set { _LastSpokeToDate = value; }
         }
 
-        private string _Website;
-        public string Website
+        private string _WebsiteURL;
+        public string WebsiteURL
         {
-            get { return _Website; }
-            set { _Website = value; }
+            get { return _WebsiteURL; }
+            set { _WebsiteURL = value; }
         }
 
         private string _LinkedInURL;

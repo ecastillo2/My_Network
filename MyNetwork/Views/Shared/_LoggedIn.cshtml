@@ -36,14 +36,9 @@
                 <div class="navbar-btn">
                     <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
                 </div>
-                <form class="navbar-form navbar-left">
-                    <div class="input-group">
-                        <input type="text" value="" class="form-control" placeholder="Search dashboard...">
-                        <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
-                    </div>
-                </form>
+                
                 <div class="navbar-btn navbar-btn-right">
-                    <a class="btn btn-success update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+                    <a class="btn btn-success update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"> <span>Log Out</span></a>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
@@ -74,7 +69,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="../UI/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("My Profile", "Profile", "Profile")</li>
-                                
+
                                 <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
                                 <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
                                 <li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
@@ -94,7 +89,7 @@
                 <nav>
                     <ul class="nav">
                         <li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Contact")</li></li>
+                        <li>@Html.ActionLink("Contacts", "Contacts", "Contacts")</li></li>
 
 
                         <li>@Html.ActionLink("Notification", "Notification", "Notification")</li>
@@ -121,17 +116,34 @@
                 <p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
             </div>
         </footer>
-        </div>
-        <!-- END WRAPPER -->
-        <!-- Javascript -->
+    </div>
+    <!-- END WRAPPER -->
+    <!-- Javascript -->
 
-        @Scripts.Render("~/UI/assets/vendor/jquery/jquery.min.js")
-        @Scripts.Render("~/UI/assets/vendor/bootstrap/js/bootstrap.min.js")
-        @Scripts.Render("~/UI/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js")
-        @Scripts.Render("~/UI/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js")
-        @Scripts.Render("~/UI/assets/vendor/chartist/js/chartist.min.js")
-        @Scripts.Render("~/UI/assets/scripts/klorofil-common.js")
-        
+    @Scripts.Render("~/UI/assets/vendor/jquery/jquery.min.js")
+    @Scripts.Render("~/UI/assets/vendor/bootstrap/js/bootstrap.min.js")
+    @Scripts.Render("~/UI/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js")
+    @Scripts.Render("~/UI/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js")
+    @Scripts.Render("~/UI/assets/vendor/chartist/js/chartist.min.js")
+    @Scripts.Render("~/UI/assets/scripts/klorofil-common.js")
+
+    <!-- Bootstrap core JavaScript-->
+    @Scripts.Render("~/UI/vendor/jquery/jquery.min.js")
+    @Scripts.Render("~/UI/vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    <!-- Core plugin JavaScript-->
+    @Scripts.Render("~/UI/vendor/jquery-easing/jquery.easing.min.js")
+
+    <!-- Page level plugin JavaScript-->
+    @Scripts.Render("~/UI/vendor/datatables/jquery.dataTables.js")
+    @Scripts.Render("~/UI/vendor/datatables/dataTables.bootstrap4.js")
+
+    <!-- Custom scripts for all pages-->
+    @Scripts.Render("~/UI/js/sb-admin.min.js")
+
+    <!-- Demo scripts for this page-->
+    @Scripts.Render("~/UI/js/demo/datatables-demo.js")
+
 
 </body>
 </html>
