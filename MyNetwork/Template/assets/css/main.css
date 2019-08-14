@@ -1139,12 +1139,13 @@ ul.activity-list > li {
   position: relative; }
 
 .profile-left {
-  padding-left: 0;
-  float: left;
-  width: 35%;
-  height: 100%;
-  position: absolute;
-  background-color: #F8F8F8; }
+    padding-left: 0;
+    float: left;
+    width: 35%;
+    height: 100%;
+    position: relative;
+    background-color: #F8F8F8;
+}
 
 .profile-right {
   float: right;

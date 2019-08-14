@@ -11,7 +11,7 @@ using MyNetwork.Models;
 
 namespace MyNetwork.Controllers
 {
-    [Authorize]
+   
     public class HomeController : Controller
     {
 

@@ -1,0 +1,7 @@
+C:\MyRepos\My_Network\Notification\bin\Debug\Notification.exe.config
+C:\MyRepos\My_Network\Notification\bin\Debug\Notification.exe
+C:\MyRepos\My_Network\Notification\bin\Debug\Notification.pdb
+C:\MyRepos\My_Network\Notification\obj\Debug\Notification.csprojAssemblyReference.cache
+C:\MyRepos\My_Network\Notification\obj\Debug\Notification.csproj.CoreCompileInputs.cache
+C:\MyRepos\My_Network\Notification\obj\Debug\Notification.exe
+C:\MyRepos\My_Network\Notification\obj\Debug\Notification.pdb

@@ -1143,7 +1143,7 @@ ul.activity-list > li {
   float: left;
   width: 35%;
   height: 100%;
-  position: absolute;
+  position: relative;
   background-color: #F8F8F8; }
 
 .profile-right {

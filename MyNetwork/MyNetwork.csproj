@@ -128,6 +128,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="DAL\DataAccess.cs" />
+    <Compile Include="DAL\PasswordReset.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
