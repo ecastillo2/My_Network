@@ -172,7 +172,7 @@ namespace MyNetwork.DAL
 
             #endregion
 
-
+            cmd.ExecuteScalar();
 
 
             sqlConn.Close();
