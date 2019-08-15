@@ -145,5 +145,16 @@ namespace MyNetwork.Controllers
 
             return View("ViewContact", "_LoggedIn");
         }
+
+
+        public ActionResult UpdateContact(string ContactId)
+        {
+
+
+
+            
+
+            return View("UpdateContacts", "_LoggedIn");
+        }
     }
 }
