@@ -1,4 +1,4 @@
-﻿	
+﻿@model IEnumerable<MyNetwork.Models.Contact>
 <style>
     .profile-left {
         padding-left: 0;
@@ -14,7 +14,7 @@
 <div class="main">
     <!-- MAIN CONTENT -->
     <div class="main-content">
-        <div >
+        <div>
             <div class="panel panel-profile">
                 <div class="clearfix">
                     <!-- LEFT COLUMN -->
@@ -58,7 +58,7 @@
                             <div class="profile-info">
                                 <h4 class="heading">Basic Info</h4>
                                 <ul class="list-unstyled list-justify">
-                                    <li>Birthdate <span>{item.Birthdy}</span></li>
+                                    <li>Birthdate <span>@Model.</span></li>
                                     <li>Primary Phone <span>{item.Phone}</span></li>
                                     <li>Secondary Phone <span>{item.Phone}</span></li>
                                     <li>Email <span>{item.Email}</span></li>
@@ -159,11 +159,11 @@
                                     </div>
                                 </div>
                             </div>
-        
+
                         </div>
                         <!-- END AWARDS -->
                         <!-- TABBED CONTENT -->
-         
+
                         <div class="profile-detail">
 
                             <div class="profile-info">
@@ -184,10 +184,10 @@
                                 </ul>
                             </div>
                         </div>
-                          
 
-                            <!-- END TABBED CONTENT -->
-                        </div>
+
+                        <!-- END TABBED CONTENT -->
+                    </div>
                     <!-- END RIGHT COLUMN -->
                 </div>
             </div>

@@ -88,6 +88,61 @@ namespace MyNetwork.Controllers
 
         public ActionResult ViewContact(string ContactId)
         {
+            Contact SelectedContact = new Contact();
+            SelectedContact = Items.retrieveContactsByContactID(ContactId);
+
+           
+            ViewBag.ContactID = SelectedContact.ContactID;
+            ViewBag.ChildrenID = SelectedContact.ChildrenID;
+            ViewBag.SiblingID = SelectedContact.SiblingID;
+            ViewBag.AddedContactDate = SelectedContact.AddedContactDate;
+            ViewBag.Category = SelectedContact.Category;
+            ViewBag.FirstName = SelectedContact.FirstName;
+            ViewBag.LastName = SelectedContact.LastName;
+            ViewBag.Age = SelectedContact.Age;
+            ViewBag.Birthday = SelectedContact.Birthday;
+            ViewBag.PrimaryPhone = SelectedContact.PrimaryPhone;
+            ViewBag.SecondaryPhone = SelectedContact.SecondaryPhone;
+            ViewBag.WorkPhone = SelectedContact.WorkPhone;
+            ViewBag.Email = SelectedContact.Email;
+            ViewBag.Relationship = SelectedContact.Relationship;
+            ViewBag.SpouseFirstName = SelectedContact.SpouseFirstName;
+            ViewBag.SpouseLastName = SelectedContact.SpouseLastName;
+            ViewBag.SalaryRange = SelectedContact.SalaryRange;
+            ViewBag.PrimaryOccupation = SelectedContact.PrimaryOccupation;
+            ViewBag.SecondaryOccupation = SelectedContact.SecondaryOccupation;
+            ViewBag.MetLocation = SelectedContact.MetLocation;
+            ViewBag.NumberOfYearKnown = SelectedContact.NumberOfYearKnown;
+            ViewBag.LastSpokeToDate = SelectedContact.LastSpokeToDate;
+            ViewBag.WebsiteURL = SelectedContact.WebsiteURL;
+            ViewBag.LinkedInURL = SelectedContact.LinkedInURL;
+            ViewBag.FaceBookURL = SelectedContact.FaceBookURL;
+            ViewBag.InstagramURL = SelectedContact.InstagramURL;
+            ViewBag.TwitterURL = SelectedContact.TwitterURL;
+            ViewBag.CompanyName = SelectedContact.CompanyName;
+            ViewBag.CompanyAddress = SelectedContact.CompanyAddress;
+            ViewBag.Greek = SelectedContact.Greek;
+            ViewBag.CollegeAttended = SelectedContact.CollegeAttended;
+            ViewBag.HighSchoolAttended = SelectedContact.HighSchoolAttended;
+            ViewBag.Degree = SelectedContact.Degree;
+            ViewBag.RelationshipStatus = SelectedContact.RelationshipStatus;
+            ViewBag.Hobbies = SelectedContact.Hobbies;
+            ViewBag.PrimaryAddress = SelectedContact.PrimaryAddress;
+            ViewBag.SecondaryAddress = SelectedContact.SecondaryAddress;
+            ViewBag.InSchool = SelectedContact.InSchool;
+            ViewBag.HasPets = SelectedContact.HasPets;
+            ViewBag.HasSiblings = SelectedContact.HasSiblings;
+            ViewBag.FatherFirstName = SelectedContact.FatherFirstName;
+            ViewBag.FatherLastName = SelectedContact.FatherLastName;
+            ViewBag.MotherFirstName = SelectedContact.MotherFirstName;
+            ViewBag.MotherLastName = SelectedContact.MotherLastName;
+            ViewBag.Skill = SelectedContact.Skill;
+            ViewBag.BusinessCardFrontImg = SelectedContact.BusinessCardFrontImg;
+            ViewBag.BusinessCardBackImg = SelectedContact.BusinessCardBackImg;
+            ViewBag.Personality = SelectedContact.Personality;
+            ViewBag.Notes = SelectedContact.Notes;
+
+
             return View("ViewContact", "_LoggedIn");
         }
     }

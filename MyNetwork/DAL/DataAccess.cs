@@ -191,5 +191,95 @@ namespace MyNetwork.DAL
         {
             return null;
         }
+
+        //Get Contact
+        public Contact retrieveContactsByContactID(string ContactID)
+        {
+
+            string validateEmail = string.Empty;
+            Contact SelectedContacts = new Contact();
+
+            //SqlDataAdapter Adapter;
+            SqlConnection sqlConn;
+            sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBconnection"].ConnectionString);
+            sqlConn.Open();
+            SqlCommand cmd = new SqlCommand("SP_ContactsByContactID", sqlConn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@ContactID", ContactID);
+
+
+            DataTable table = new DataTable();
+
+
+            using (SqlDataAdapter Adapter = new SqlDataAdapter(cmd))
+            {
+                Adapter.Fill(table);
+
+                foreach (DataRow dt in table.Rows)
+                {
+
+
+
+                    SelectedContacts.ContactID = Convert.ToString(dt["ContactId"].ToString());
+                    SelectedContacts.ChildrenID = Convert.ToString(dt["ChildrenID"].ToString());
+                    SelectedContacts.SiblingID = Convert.ToString(dt["SiblingID"].ToString());
+                    SelectedContacts.AddedContactDate = Convert.ToString(dt["AddedContactDate"].ToString());
+                    SelectedContacts.Category = Convert.ToString(dt["Category"]);
+                    SelectedContacts.FirstName = Convert.ToString(dt["FirstName"]);
+                    SelectedContacts.LastName = Convert.ToString(dt["LastName"]);
+                    SelectedContacts.Age = Convert.ToString(dt["Age"]);
+                    SelectedContacts.Birthday = Convert.ToString(dt["Birthday"]);
+                    SelectedContacts.PrimaryPhone = Convert.ToString(dt["PrimaryPhone"]);
+                    SelectedContacts.SecondaryPhone = Convert.ToString(dt["SecondaryPhone"]);
+                    SelectedContacts.WorkPhone = Convert.ToString(dt["WorkPhone"]);
+                    SelectedContacts.Email = Convert.ToString(dt["Email"]);
+                    SelectedContacts.Relationship = Convert.ToString(dt["Relationship"]);
+                    SelectedContacts.SpouseFirstName = Convert.ToString(dt["SpouseFirstName"]);
+                    SelectedContacts.SpouseLastName = Convert.ToString(dt["SpouseLastName"]);
+                    SelectedContacts.SalaryRange = Convert.ToString(dt["SalaryRange"]);
+                    SelectedContacts.PrimaryOccupation = Convert.ToString(dt["PrimaryOccupation"]);
+                    SelectedContacts.SecondaryOccupation = Convert.ToString(dt["SecondaryOccupation"]);
+                    SelectedContacts.MetLocation = Convert.ToString(dt["MetLocation"]);
+                    SelectedContacts.NumberOfYearKnown = Convert.ToString(dt["NumberOfYearKnown"]);
+                    SelectedContacts.LastSpokeToDate = Convert.ToString(dt["LastSpokeToDate"]);
+                    SelectedContacts.WebsiteURL = Convert.ToString(dt["WebsiteURL"]);
+                    SelectedContacts.LinkedInURL = Convert.ToString(dt["LinkedInURL"]);
+                    SelectedContacts.FaceBookURL = Convert.ToString(dt["FaceBookURL"]);
+                    SelectedContacts.InstagramURL = Convert.ToString(dt["InstagramURL"]);
+                    SelectedContacts.TwitterURL = Convert.ToString(dt["TwitterURL"]);
+                    SelectedContacts.CompanyName = Convert.ToString(dt["CompanyName"]);
+                    SelectedContacts.CompanyAddress = Convert.ToString(dt["CompanyAddress"]);
+                    SelectedContacts.Greek = Convert.ToString(dt["Greek"]);
+                    SelectedContacts.CollegeAttended = Convert.ToString(dt["CollegeAttended"]);
+                    SelectedContacts.HighSchoolAttended = Convert.ToString(dt["HighSchoolAttended"]);
+                    SelectedContacts.Degree = Convert.ToString(dt["Degree"]);
+                    SelectedContacts.RelationshipStatus = Convert.ToString(dt["RelationshipStatus"]);
+                    SelectedContacts.Hobbies = Convert.ToString(dt["Hobbies"]);
+                    SelectedContacts.PrimaryAddress = Convert.ToString(dt["PrimaryAddress"]);
+                    SelectedContacts.SecondaryAddress = Convert.ToString(dt["SecondaryAddress"]);
+                    SelectedContacts.InSchool = Convert.ToString(dt["InSchool"]);
+                    SelectedContacts.HasPets = Convert.ToString(dt["HasPets"]);
+                    SelectedContacts.HasSiblings = Convert.ToString(dt["HasSiblings"]);
+                    SelectedContacts.FatherFirstName = Convert.ToString(dt["FatherFirstName"]);
+                    SelectedContacts.FatherLastName = Convert.ToString(dt["FatherLastName"]);
+                    SelectedContacts.MotherFirstName = Convert.ToString(dt["MotherFirstName"]);
+                    SelectedContacts.MotherLastName = Convert.ToString(dt["MotherLastName"]);
+                    SelectedContacts.Skill = Convert.ToString(dt["Skill"]);
+                    SelectedContacts.BusinessCardFrontImg = Convert.ToString(dt["BusinessCardFrontImg"]);
+                    SelectedContacts.BusinessCardBackImg = Convert.ToString(dt["BusinessCardBackImg"]);
+                    SelectedContacts.Personality = Convert.ToString(dt["Personality"]);
+                    SelectedContacts.Notes = Convert.ToString(dt["Notes"]);
+                    
+
+                }
+
+
+
+            }
+
+            sqlConn.Close();
+
+            return SelectedContacts;
+        }
     }
 }
