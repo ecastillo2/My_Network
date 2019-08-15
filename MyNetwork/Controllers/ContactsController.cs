@@ -154,7 +154,7 @@ namespace MyNetwork.Controllers
 
             
 
-            return View("UpdateContacts", "_LoggedIn");
+            return View("UpdateContact", "_LoggedIn");
         }
     }
 }

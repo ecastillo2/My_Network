@@ -2068,6 +2068,7 @@
     <Content Include="UI\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="UI\vendor\jquery\jquery.min.map" />
     <Content Include="UI\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Contacts\UpdateContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
