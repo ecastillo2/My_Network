@@ -46,8 +46,8 @@ namespace MyNetwork.DAL
                     listofContacts.Add(new Contact
                     {
                         ContactID = Convert.ToString(dt["ContactId"].ToString()),                       
-                        ChildrenID = Convert.ToString(dt["ChildrenID"].ToString()),
-                        SiblingID = Convert.ToString(dt["SiblingID"].ToString()),
+                        //ChildrenID = Convert.ToString(dt["ChildrenID"].ToString()),
+                        //SiblingID = Convert.ToString(dt["SiblingID"].ToString()),
                         AddedContactDate = Convert.ToString(dt["AddedContactDate"].ToString()),
                         Category = Convert.ToString(dt["Category"]),
                         FirstName = Convert.ToString(dt["FirstName"]),
@@ -59,8 +59,8 @@ namespace MyNetwork.DAL
                         WorkPhone = Convert.ToString(dt["WorkPhone"]),
                         Email = Convert.ToString(dt["Email"]),
                         Relationship = Convert.ToString(dt["Relationship"]),
-                        SpouseFirstName = Convert.ToString(dt["SpouseFirstName"]),
-                        SpouseLastName = Convert.ToString(dt["SpouseLastName"]),
+                        //SpouseFirstName = Convert.ToString(dt["SpouseFirstName"]),
+                        //SpouseLastName = Convert.ToString(dt["SpouseLastName"]),
                         SalaryRange = Convert.ToString(dt["SalaryRange"]),
                         PrimaryOccupation = Convert.ToString(dt["PrimaryOccupation"]),
                         SecondaryOccupation = Convert.ToString(dt["SecondaryOccupation"]),
@@ -83,12 +83,12 @@ namespace MyNetwork.DAL
                         PrimaryAddress = Convert.ToString(dt["PrimaryAddress"]),
                         SecondaryAddress = Convert.ToString(dt["SecondaryAddress"]),
                         InSchool = Convert.ToString(dt["InSchool"]),
-                        HasPets = Convert.ToString(dt["HasPets"]),
-                        HasSiblings = Convert.ToString(dt["HasSiblings"]),
-                        FatherFirstName = Convert.ToString(dt["FatherFirstName"]),
-                        FatherLastName = Convert.ToString(dt["FatherLastName"]),
-                        MotherFirstName = Convert.ToString(dt["MotherFirstName"]),
-                        MotherLastName = Convert.ToString(dt["MotherLastName"]),
+                        //HasPets = Convert.ToString(dt["HasPets"]),
+                        //HasSiblings = Convert.ToString(dt["HasSiblings"]),
+                        //FatherFirstName = Convert.ToString(dt["FatherFirstName"]),
+                        //FatherLastName = Convert.ToString(dt["FatherLastName"]),
+                        //MotherFirstName = Convert.ToString(dt["MotherFirstName"]),
+                        //MotherLastName = Convert.ToString(dt["MotherLastName"]),
                         Skill = Convert.ToString(dt["Skill"]),
                         BusinessCardFrontImg = Convert.ToString(dt["BusinessCardFrontImg"]),
                         BusinessCardBackImg = Convert.ToString(dt["BusinessCardBackImg"]),
@@ -137,8 +137,8 @@ namespace MyNetwork.DAL
             cmd.Parameters.AddWithValue("@WorkPhone", contactInput.WorkPhone);
             cmd.Parameters.AddWithValue("@Email", contactInput.Email);
             cmd.Parameters.AddWithValue("@Relationship", contactInput.Relationship);
-            cmd.Parameters.AddWithValue("@SpouseFirstName", contactInput.SpouseFirstName);
-            cmd.Parameters.AddWithValue("@SpouseLastName", contactInput.SpouseLastName);
+            //cmd.Parameters.AddWithValue("@SpouseFirstName", contactInput.SpouseFirstName);
+            //cmd.Parameters.AddWithValue("@SpouseLastName", contactInput.SpouseLastName);
             cmd.Parameters.AddWithValue("@SalaryRange", contactInput.SalaryRange);
             cmd.Parameters.AddWithValue("@PrimaryOccupation", contactInput.PrimaryOccupation);
             cmd.Parameters.AddWithValue("@SecondaryOccupation", contactInput.SecondaryOccupation);
@@ -161,12 +161,12 @@ namespace MyNetwork.DAL
             cmd.Parameters.AddWithValue("@PrimaryAddress", contactInput.PrimaryAddress);
             cmd.Parameters.AddWithValue("@SecondaryAddress", contactInput.SecondaryAddress);
             cmd.Parameters.AddWithValue("@InSchool", contactInput.InSchool);
-            cmd.Parameters.AddWithValue("@HasPets", contactInput.HasPets);
-            cmd.Parameters.AddWithValue("@HasSiblings", contactInput.HasSiblings);
-            cmd.Parameters.AddWithValue("@FatherFirstName", contactInput.FatherFirstName);
-            cmd.Parameters.AddWithValue("@FatherLastName", contactInput.FatherLastName);
-            cmd.Parameters.AddWithValue("@MotherFirstName", contactInput.MotherFirstName);
-            cmd.Parameters.AddWithValue("@MotherLastName", contactInput.MotherLastName);
+            //cmd.Parameters.AddWithValue("@HasPets", contactInput.HasPets);
+            //cmd.Parameters.AddWithValue("@HasSiblings", contactInput.HasSiblings);
+            //cmd.Parameters.AddWithValue("@FatherFirstName", contactInput.FatherFirstName);
+            //cmd.Parameters.AddWithValue("@FatherLastName", contactInput.FatherLastName);
+            //cmd.Parameters.AddWithValue("@MotherFirstName", contactInput.MotherFirstName);
+            //cmd.Parameters.AddWithValue("@MotherLastName", contactInput.MotherLastName);
             cmd.Parameters.AddWithValue("@Skill", contactInput.Skill);
             cmd.Parameters.AddWithValue("@BusinessCardFrontImg", contactInput.BusinessCardFrontImg);
             cmd.Parameters.AddWithValue("@BusinessCardBackImg", contactInput.BusinessCardBackImg);
@@ -224,8 +224,8 @@ namespace MyNetwork.DAL
 
 
                     SelectedContacts.ContactID = Convert.ToString(dt["ContactId"].ToString());
-                    SelectedContacts.ChildrenID = Convert.ToString(dt["ChildrenID"].ToString());
-                    SelectedContacts.SiblingID = Convert.ToString(dt["SiblingID"].ToString());
+                    //SelectedContacts.ChildrenID = Convert.ToString(dt["ChildrenID"].ToString());
+                    //SelectedContacts.SiblingID = Convert.ToString(dt["SiblingID"].ToString());
                     SelectedContacts.AddedContactDate = Convert.ToString(dt["AddedContactDate"].ToString());
                     SelectedContacts.Category = Convert.ToString(dt["Category"]);
                     SelectedContacts.FirstName = Convert.ToString(dt["FirstName"]);
@@ -237,8 +237,8 @@ namespace MyNetwork.DAL
                     SelectedContacts.WorkPhone = Convert.ToString(dt["WorkPhone"]);
                     SelectedContacts.Email = Convert.ToString(dt["Email"]);
                     SelectedContacts.Relationship = Convert.ToString(dt["Relationship"]);
-                    SelectedContacts.SpouseFirstName = Convert.ToString(dt["SpouseFirstName"]);
-                    SelectedContacts.SpouseLastName = Convert.ToString(dt["SpouseLastName"]);
+                    //SelectedContacts.SpouseFirstName = Convert.ToString(dt["SpouseFirstName"]);
+                    //SelectedContacts.SpouseLastName = Convert.ToString(dt["SpouseLastName"]);
                     SelectedContacts.SalaryRange = Convert.ToString(dt["SalaryRange"]);
                     SelectedContacts.PrimaryOccupation = Convert.ToString(dt["PrimaryOccupation"]);
                     SelectedContacts.SecondaryOccupation = Convert.ToString(dt["SecondaryOccupation"]);
@@ -261,12 +261,12 @@ namespace MyNetwork.DAL
                     SelectedContacts.PrimaryAddress = Convert.ToString(dt["PrimaryAddress"]);
                     SelectedContacts.SecondaryAddress = Convert.ToString(dt["SecondaryAddress"]);
                     SelectedContacts.InSchool = Convert.ToString(dt["InSchool"]);
-                    SelectedContacts.HasPets = Convert.ToString(dt["HasPets"]);
-                    SelectedContacts.HasSiblings = Convert.ToString(dt["HasSiblings"]);
-                    SelectedContacts.FatherFirstName = Convert.ToString(dt["FatherFirstName"]);
-                    SelectedContacts.FatherLastName = Convert.ToString(dt["FatherLastName"]);
-                    SelectedContacts.MotherFirstName = Convert.ToString(dt["MotherFirstName"]);
-                    SelectedContacts.MotherLastName = Convert.ToString(dt["MotherLastName"]);
+                    //SelectedContacts.HasPets = Convert.ToString(dt["HasPets"]);
+                    //SelectedContacts.HasSiblings = Convert.ToString(dt["HasSiblings"]);
+                    //SelectedContacts.FatherFirstName = Convert.ToString(dt["FatherFirstName"]);
+                    //SelectedContacts.FatherLastName = Convert.ToString(dt["FatherLastName"]);
+                    //SelectedContacts.MotherFirstName = Convert.ToString(dt["MotherFirstName"]);
+                    //SelectedContacts.MotherLastName = Convert.ToString(dt["MotherLastName"]);
                     SelectedContacts.Skill = Convert.ToString(dt["Skill"]);
                     SelectedContacts.BusinessCardFrontImg = Convert.ToString(dt["BusinessCardFrontImg"]);
                     SelectedContacts.BusinessCardBackImg = Convert.ToString(dt["BusinessCardBackImg"]);

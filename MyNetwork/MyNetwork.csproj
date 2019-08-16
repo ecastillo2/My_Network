@@ -134,8 +134,10 @@
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactGroup.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ImageUpload.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -2149,6 +2151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UI\Images\BackBusinessCardImage\" />
+    <Folder Include="UI\Images\FrontBusinessCardImage\" />
+    <Folder Include="UI\Images\ProfileImages\" />
     <Folder Include="Views\ViewContact\" />
   </ItemGroup>
   <ItemGroup>

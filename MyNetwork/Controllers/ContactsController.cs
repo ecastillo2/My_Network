@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using MyNetwork.Models;
 using MyNetwork.DAL;
+using MyNetwork.Services;
 
 
 namespace MyNetwork.Controllers
@@ -13,6 +14,8 @@ namespace MyNetwork.Controllers
     public class ContactsController : Controller
     {
         // GET: Contacts
+        Image ig = new Image();
+        ImageUpload uploadImageFun = new ImageUpload();
         ContactGroup gp = new ContactGroup();
         public User CurrentUser = new User();
         public Contact addContact = new Contact();
@@ -27,8 +30,11 @@ namespace MyNetwork.Controllers
             return View("Contacts", "_LoggedIn", contactItems.ToList());
         }
 
-        public ActionResult AddContact( string category, string firstName, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string image, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating, FormCollection group)
+        public ActionResult AddContact( string category, string firstName, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating, FormCollection group)
         {
+            
+
+
             #region add contact to class
             //addContact.UserID = CurrentUser.UserID;
             addContact.Category = category;
@@ -39,10 +45,10 @@ namespace MyNetwork.Controllers
             addContact.PrimaryPhone = primaryPhone;
             addContact.SecondaryPhone = secondaryPhone;
             addContact.WorkPhone = workPhone;
-            addContact.Image = image;
+            //addContact.Image = image;
             addContact.Relationship = relationship;
-            addContact.SpouseFirstName = spouseFirstName;
-            addContact.SpouseLastName = spouseLastName;
+            //addContact.SpouseFirstName = spouseFirstName;
+            //addContact.SpouseLastName = spouseLastName;
             addContact.PrimaryOccupation = primaryOccupation;
             addContact.SecondaryOccupation = secondaryOccupation;
             addContact.MetLocation = metLocation;
@@ -55,7 +61,7 @@ namespace MyNetwork.Controllers
             addContact.TwitterURL = twitterURL;
             addContact.CompanyName = companyName;
             addContact.CompanyAddress = companyAddress;
-            addContact.Group = null;
+            //addContact.Group = null;
             // addContact.Greek = greek;
             addContact.CollegeAttended = collegeAttened;
             addContact.HighSchoolAttended = highSchoolAttened;
@@ -65,12 +71,12 @@ namespace MyNetwork.Controllers
             addContact.PrimaryAddress = primaryAddress;
             addContact.SecondaryAddress = secondaryAddress;
             addContact.InSchool = inSchool;
-            addContact.HasPets = hasPets;
-            addContact.HasSiblings = hasSiblings;
-            addContact.FatherFirstName = fatherFirstName;
-            addContact.FatherLastName = fatherLastName;
-            addContact.MotherFirstName = motherFirstName;
-            addContact.MotherLastName = motherLastName;
+            //addContact.HasPets = hasPets;
+            //addContact.HasSiblings = hasSiblings;
+            //addContact.FatherFirstName = fatherFirstName;
+            //addContact.FatherLastName = fatherLastName;
+            //addContact.MotherFirstName = motherFirstName;
+            //addContact.MotherLastName = motherLastName;
             addContact.Skill = skill;
             addContact.BusinessCardFrontImg = businessCardFrontImg;
             addContact.BusinessCardBackImg = businessCardBackImg;
@@ -118,8 +124,8 @@ namespace MyNetwork.Controllers
 
            
             ViewBag.ContactID = SelectedContact.ContactID;
-            ViewBag.ChildrenID = SelectedContact.ChildrenID;
-            ViewBag.SiblingID = SelectedContact.SiblingID;
+            //ViewBag.ChildrenID = SelectedContact.ChildrenID;
+            //ViewBag.SiblingID = SelectedContact.SiblingID;
             ViewBag.AddedContactDate = SelectedContact.AddedContactDate;
             ViewBag.Category = SelectedContact.Category;
             ViewBag.FirstName = SelectedContact.FirstName;
@@ -131,8 +137,8 @@ namespace MyNetwork.Controllers
             ViewBag.WorkPhone = SelectedContact.WorkPhone;
             ViewBag.Email = SelectedContact.Email;
             ViewBag.Relationship = SelectedContact.Relationship;
-            ViewBag.SpouseFirstName = SelectedContact.SpouseFirstName;
-            ViewBag.SpouseLastName = SelectedContact.SpouseLastName;
+            //ViewBag.SpouseFirstName = SelectedContact.SpouseFirstName;
+            //ViewBag.SpouseLastName = SelectedContact.SpouseLastName;
             ViewBag.SalaryRange = SelectedContact.SalaryRange;
             ViewBag.PrimaryOccupation = SelectedContact.PrimaryOccupation;
             ViewBag.SecondaryOccupation = SelectedContact.SecondaryOccupation;
@@ -155,12 +161,12 @@ namespace MyNetwork.Controllers
             ViewBag.PrimaryAddress = SelectedContact.PrimaryAddress;
             ViewBag.SecondaryAddress = SelectedContact.SecondaryAddress;
             ViewBag.InSchool = SelectedContact.InSchool;
-            ViewBag.HasPets = SelectedContact.HasPets;
-            ViewBag.HasSiblings = SelectedContact.HasSiblings;
-            ViewBag.FatherFirstName = SelectedContact.FatherFirstName;
-            ViewBag.FatherLastName = SelectedContact.FatherLastName;
-            ViewBag.MotherFirstName = SelectedContact.MotherFirstName;
-            ViewBag.MotherLastName = SelectedContact.MotherLastName;
+            //ViewBag.HasPets = SelectedContact.HasPets;
+            //ViewBag.HasSiblings = SelectedContact.HasSiblings;
+            //ViewBag.FatherFirstName = SelectedContact.FatherFirstName;
+            //ViewBag.FatherLastName = SelectedContact.FatherLastName;
+            //ViewBag.MotherFirstName = SelectedContact.MotherFirstName;
+            //ViewBag.MotherLastName = SelectedContact.MotherLastName;
             ViewBag.Skill = SelectedContact.Skill;
             ViewBag.BusinessCardFrontImg = SelectedContact.BusinessCardFrontImg;
             ViewBag.BusinessCardBackImg = SelectedContact.BusinessCardBackImg;
@@ -176,11 +182,54 @@ namespace MyNetwork.Controllers
         public ActionResult UpdateContact(string ContactId)
         {
 
-
-
-            
-
             return View("UpdateContact", "_LoggedIn");
+        }
+
+        public ActionResult UploadImage(string profileImage, string frontBCImage, string backBCImage, string ContactID)
+        {
+
+
+            string imageType;
+
+            if (string.IsNullOrEmpty(profileImage) == true)
+            {
+                imageType = "profileImage";
+
+                ig.ImageType = imageType;
+                ig.Title = profileImage;
+                ig.ImagePath = "";
+
+
+                uploadImageFun.SaveImage(ig, ContactID);
+
+            }
+            if (string.IsNullOrEmpty(frontBCImage) == true)
+            {
+                imageType = "frontBCImage";
+
+                ig.ImageType = imageType;
+                ig.Title = frontBCImage;
+                ig.ImagePath = "";
+
+
+                uploadImageFun.SaveImage(ig, ContactID);
+
+
+            }
+            if (string.IsNullOrEmpty(backBCImage) == true)
+            {
+                imageType = "backBCImage";
+
+                ig.ImageType = imageType;
+                ig.Title = backBCImage;
+                ig.ImagePath = "";
+
+
+                uploadImageFun.SaveImage(ig, ContactID);
+
+            }
+
+            return View("ViewContact", "_LoggedIn");
         }
     }
 }

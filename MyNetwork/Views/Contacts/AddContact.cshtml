@@ -48,10 +48,16 @@
             <div class="main-content">
                 <div class="container-fluid">
                     <h3 class="page-title">Add Contact</h3>
+
+
+
+
                     @using (Html.BeginForm("AddContact", "Contacts", FormMethod.Post))
                     {
                         <input type="submit" value="Add Contact" class="btn btn-primary">
+
                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <br />
@@ -64,7 +70,7 @@
                                     <div class="panel-body">
                                         <input type="text" class="form-control" name="category" placeholder="Category">
                                         <br>
-                                        <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                                        <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
                                         <br>
                                         <input type="text" class="form-control" name="lastName" placeholder="Last Name">
                                         <br>
@@ -101,9 +107,9 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            </form>
-                                            <br>
-                                            Rating: <input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0">
+                                        </form>
+                                        <br>
+                                        Rating: <input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0">
                                     </div>
                                 </div>
                                 <!-- END BUTTONS -->
@@ -126,31 +132,7 @@
                                     </div>
                                 </div>
                                 <!-- END INPUTS -->
-                                <!-- INPUT SIZING -->
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Family</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <input type="text" class="form-control" name="spouseFirstName" placeholder="Spouse First Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="spouseLastName" placeholder="Spouse Last Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="hasChildren" placeholder="Has Children">
-                                        <br>
-                                        <input type="text" class="form-control" name="fatherFirstName" placeholder="Father First Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="fatherLastName" placeholder="Father Last Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="motherFirstName" placeholder="Mother First Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="motherLastName" placeholder="Mother Last Name">
-                                        <br>
-                                        <input type="text" class="form-control" name="hasPets" placeholder="Has Pets">
 
-                                    </div>
-                                </div>
-                                <!-- END INPUT SIZING -->
                             </div>
                             <div class="col-md-6">
                                 <!-- LABELS -->

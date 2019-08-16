@@ -15,19 +15,19 @@ namespace MyNetwork.Models
             set { _ContactID = value; }
         }
 
-        private static string _ChildrenID;
-        public string ChildrenID
-        {
-            get { return _ChildrenID; }
-            set { _ChildrenID = value; }
-        }
+        //private static string _ChildrenID;
+        //public string ChildrenID
+        //{
+        //    get { return _ChildrenID; }
+        //    set { _ChildrenID = value; }
+        //}
 
-        private static string _SiblingID;
-        public string SiblingID
-        {
-            get { return _SiblingID; }
-            set { _SiblingID = value; }
-        }
+        //private static string _SiblingID;
+        //public string SiblingID
+        //{
+        //    get { return _SiblingID; }
+        //    set { _SiblingID = value; }
+        //}
 
         private string _AddedContactDate;
         public string AddedContactDate
@@ -113,19 +113,19 @@ namespace MyNetwork.Models
             set { _Relationship = value; }
         }
 
-        private string _SpouseFirstName;
-        public string SpouseFirstName
-        {
-            get { return _SpouseFirstName; }
-            set { _SpouseFirstName = value; }
-        }
+        //private string _SpouseFirstName;
+        //public string SpouseFirstName
+        //{
+        //    get { return _SpouseFirstName; }
+        //    set { _SpouseFirstName = value; }
+        //}
 
-        private string _SpouseLastName;
-        public string SpouseLastName
-        {
-            get { return _SpouseLastName; }
-            set { _SpouseLastName = value; }
-        }
+        //private string _SpouseLastName;
+        //public string SpouseLastName
+        //{
+        //    get { return _SpouseLastName; }
+        //    set { _SpouseLastName = value; }
+        //}
 
         private string _SalaryRange;
         public string SalaryRange
@@ -219,12 +219,12 @@ namespace MyNetwork.Models
         }
 
      
-        private List<string> _Group = new List<string>();
-        public List<string> Group
-        {
-            get { return _Group; }
-            set { _Group = value; }
-        }
+        //private List<string> _Group = new List<string>();
+        //public List<string> Group
+        //{
+        //    get { return _Group; }
+        //    set { _Group = value; }
+        //}
 
         private string _CollegeAttended;
         public string CollegeAttended
@@ -282,47 +282,47 @@ namespace MyNetwork.Models
             set { _InSchool = value; }
         }
 
-        private string _HasPets;
-        public string HasPets
-        {
-            get { return _HasPets; }
-            set { _HasPets = value; }
-        }
+        //private string _HasPets;
+        //public string HasPets
+        //{
+        //    get { return _HasPets; }
+        //    set { _HasPets = value; }
+        //}
 
-        private string _HasSiblings;
-        public string HasSiblings
-        {
-            get { return _HasSiblings; }
-            set { _HasSiblings = value; }
-        }
+        //private string _HasSiblings;
+        //public string HasSiblings
+        //{
+        //    get { return _HasSiblings; }
+        //    set { _HasSiblings = value; }
+        //}
 
-        private string _FatherFirstName;
-        public string FatherFirstName
-        {
-            get { return _FatherFirstName; }
-            set { _FatherFirstName = value; }
-        }
+        //private string _FatherFirstName;
+        //public string FatherFirstName
+        //{
+        //    get { return _FatherFirstName; }
+        //    set { _FatherFirstName = value; }
+        //}
 
-        private string _FatherLastName;
-        public string FatherLastName
-        {
-            get { return _FatherLastName; }
-            set { _FatherLastName = value; }
-        }
+        //private string _FatherLastName;
+        //public string FatherLastName
+        //{
+        //    get { return _FatherLastName; }
+        //    set { _FatherLastName = value; }
+        //}
 
-        private string _MotherFirstName;
-        public string MotherFirstName
-        {
-            get { return _MotherFirstName; }
-            set { _MotherFirstName = value; }
-        }
+        //private string _MotherFirstName;
+        //public string MotherFirstName
+        //{
+        //    get { return _MotherFirstName; }
+        //    set { _MotherFirstName = value; }
+        //}
 
-        private string _MotherLastName;
-        public string MotherLastName
-        {
-            get { return _MotherLastName; }
-            set { _MotherLastName = value; }
-        }
+        //private string _MotherLastName;
+        //public string MotherLastName
+        //{
+        //    get { return _MotherLastName; }
+        //    set { _MotherLastName = value; }
+        //}
 
         private string _Skill;
         public string Skill
