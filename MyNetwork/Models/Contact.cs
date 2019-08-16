@@ -218,11 +218,12 @@ namespace MyNetwork.Models
             set { _CompanyAddress = value; }
         }
 
-        private string _Greek;
-        public string Greek
+     
+        private List<string> _Group = new List<string>();
+        public List<string> Group
         {
-            get { return _Greek; }
-            set { _Greek = value; }
+            get { return _Group; }
+            set { _Group = value; }
         }
 
         private string _CollegeAttended;

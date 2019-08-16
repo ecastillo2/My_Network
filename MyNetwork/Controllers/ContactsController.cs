@@ -13,7 +13,7 @@ namespace MyNetwork.Controllers
     public class ContactsController : Controller
     {
         // GET: Contacts
-
+        ContactGroup gp = new ContactGroup();
         public User CurrentUser = new User();
         public Contact addContact = new Contact();
         DataAccess Items = new DataAccess();
@@ -27,7 +27,7 @@ namespace MyNetwork.Controllers
             return View("Contacts", "_LoggedIn", contactItems.ToList());
         }
 
-        public ActionResult AddContact( string category, string firstName, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string image, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating)
+        public ActionResult AddContact( string category, string firstName, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string image, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating, FormCollection group)
         {
             #region add contact to class
             //addContact.UserID = CurrentUser.UserID;
@@ -55,7 +55,8 @@ namespace MyNetwork.Controllers
             addContact.TwitterURL = twitterURL;
             addContact.CompanyName = companyName;
             addContact.CompanyAddress = companyAddress;
-            addContact.Greek = greek;
+            addContact.Group = null;
+            // addContact.Greek = greek;
             addContact.CollegeAttended = collegeAttened;
             addContact.HighSchoolAttended = highSchoolAttened;
             addContact.Degree = degreee;
@@ -78,6 +79,29 @@ namespace MyNetwork.Controllers
             addContact.SalaryRange = salaryRange;
             addContact.Email = email;
             #endregion
+            string[] headerName = null;
+
+            //the form values becomes comma delimited array when it come to server side
+            if (headerName == null ) {
+               
+            }
+            else
+            {
+                headerName = group["group"].Split(char.Parse(","));
+
+
+                foreach (var x in headerName)
+                {
+                    //insert Header name and sturcture int dictionary
+                    gp.Group.Add(x);
+                }
+            }
+
+            //process values
+            List<string> headerList = new List<string>();
+            Dictionary<string, string> HeaderMapping = new Dictionary<string, string>();
+
+
 
 
 
@@ -89,6 +113,7 @@ namespace MyNetwork.Controllers
         public ActionResult ViewContact(string ContactId)
         {
             Contact SelectedContact = new Contact();
+            ContactGroup SelectedGroup = new ContactGroup();
             SelectedContact = Items.retrieveContactsByContactID(ContactId);
 
            
@@ -121,7 +146,7 @@ namespace MyNetwork.Controllers
             ViewBag.TwitterURL = SelectedContact.TwitterURL;
             ViewBag.CompanyName = SelectedContact.CompanyName;
             ViewBag.CompanyAddress = SelectedContact.CompanyAddress;
-            ViewBag.Greek = SelectedContact.Greek;
+            //ViewBag.Greek = SelectedContact.Greek;
             ViewBag.CollegeAttended = SelectedContact.CollegeAttended;
             ViewBag.HighSchoolAttended = SelectedContact.HighSchoolAttended;
             ViewBag.Degree = SelectedContact.Degree;
@@ -142,8 +167,9 @@ namespace MyNetwork.Controllers
             ViewBag.Personality = SelectedContact.Personality;
             ViewBag.Notes = SelectedContact.Notes;
 
-
-            return View("ViewContact", "_LoggedIn");
+            //SelectedGroup.Group.Add("Test");
+            //gp = SelectedGroup.Group.ToList();
+            return View("ViewContact", "_LoggedIn", SelectedGroup.Group.ToList());
         }
 
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MyNetwork.Models.Contact>
+﻿@*@using MyNetwork.Models;*@
 <style>
     .profile-left {
         padding-left: 0;
@@ -59,12 +59,13 @@
                                 <h4 class="heading">Basic Info</h4>
                                 <ul class="list-unstyled list-justify">
                                     <li>Birthdate <span>@ViewBag.Birthday</span></li>
-                                    <li>Primary Phone <span>{item.Phone}</span></li>
-                                    <li>Secondary Phone <span>{item.Phone}</span></li>
-                                    <li>Email <span>{item.Email}</span></li>
-                                    <li>Occupation <span>{item.Occupation}</span></li>
-                                    <li>Website <span><a href="https://www.themeineed.com">{item.WebsiteURL}</a></span></li>
-                                    <li>Rating <span>{item.Rating}</span></li>
+                                    <li>Primary Phone <span>@ViewBag.PrimaryPhone</span></li>
+                                    <li>Secondary Phone <span>@ViewBag.SecondaryPhone</span></li>
+                                    <li>Email <span>@ViewBag.Email</span></li>
+                                    <li>Occupation <span>@ViewBag.Occupation</span></li>
+                                    <li>Married <span>@ViewBag.Married</span></li>
+                                    <li>Website <span><a href="https://www.themeineed.com">@ViewBag.Website</a></span></li>
+                                    <li>Rating <span>@ViewBag.Rating</span></li>
                                 </ul>
                             </div>
 
@@ -72,10 +73,10 @@
                             <div class="profile-info">
                                 <h4 class="heading">Social</h4>
                                 <ul class="list-inline social-icons">
-                                    <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" class="google-plus-bg"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#" class="github-bg"><i class="fa fa-github"></i></a></li>
+                                    <li><a href=@ViewBag.FacebookURL class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href=@ViewBag.TwitterURL class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href=@ViewBag.InstagramURL class="google-plus-bg"><i class="fa fa-instagram"></i></a></li>
+
                                 </ul>
                             </div>
 
@@ -83,38 +84,38 @@
                             <div class="profile-info">
                                 <h4 class="heading">Personal</h4>
                                 <ul class="list-unstyled list-justify">
-                                    <li>Birthdate <span>{item.Birthdy}</span></li>
-                                    <li>Primary Phone <span>{item.Phone}</span></li>
-                                    <li>Secondary Phone <span>{item.Phone}</span></li>
-                                    <li>Email <span>{item.Email}</span></li>
-                                    <li>Occupation <span>{item.Occupation}</span></li>
-                                    <li>Website <span><a href="https://www.themeineed.com">{item.WebsiteURL}</a></span></li>
+                                    <li>Met Location <span>@ViewBag.MetLocation</span></li>
+                                    <li>Number of Year Known <span>@ViewBag.NumberOfYearKnown</span></li>
+                                    <li>Last Spoken to <span>@ViewBag.LastSpokeToDate</span></li>
+                                    <li>Personality <span>@ViewBag.Personality</span></li>
+                                    <li>Relationship Status <span>@ViewBag.RelationshipStatus</span></li>
+
                                 </ul>
                             </div>
 
                             <div class="profile-info">
                                 <h4 class="heading">Education</h4>
                                 <ul class="list-unstyled list-justify">
-                                    <li>Birthdate <span>{item.Birthdy}</span></li>
-                                    <li>Primary Phone <span>{item.Phone}</span></li>
-                                    <li>Secondary Phone <span>{item.Phone}</span></li>
-                                    <li>Email <span>{item.Email}</span></li>
-                                    <li>Occupation <span>{item.Occupation}</span></li>
-                                    <li>Website <span><a href="https://www.themeineed.com">{item.WebsiteURL}</a></span></li>
+                                    <li>In School <span>@ViewBag.InSchool</span></li>
+                                    <li>College Attended <span>@ViewBag.CollegeAttended</span></li>
+                                    <li>HighSchool Attened <span>@ViewBag.HighSchoolAttened</span></li>
+                                    <li>Degree <span>@ViewBag.Degree</span></li>
+                                    <li>Personality <span>@ViewBag.Personality</span></li>
+
                                 </ul>
                             </div>
 
-                            <div class="profile-info">
-                                <h4 class="heading">Family</h4>
-                                <ul class="list-unstyled list-justify">
-                                    <li>Birthdate <span>{item.Birthdy}</span></li>
-                                    <li>Primary Phone <span>{item.Phone}</span></li>
-                                    <li>Secondary Phone <span>{item.Phone}</span></li>
-                                    <li>Email <span>{item.Email}</span></li>
-                                    <li>Occupation <span>{item.Occupation}</span></li>
-                                    <li>Website <span><a href="https://www.themeineed.com">{item.WebsiteURL}</a></span></li>
-                                </ul>
-                            </div>
+                            @*<div class="profile-info">
+                                    <h4 class="heading">Family</h4>
+                                    <ul class="list-unstyled list-justify">
+                                        <li>Spouse First <span>{item.Birthdy}</span></li>
+                                        <li>Primary Phone <span>{item.Phone}</span></li>
+                                        <li>Secondary Phone <span>{item.Phone}</span></li>
+                                        <li>Email <span>{item.Email}</span></li>
+                                        <li>Occupation <span>{item.Occupation}</span></li>
+                                        <li>Website <span><a href="https://www.themeineed.com">{item.WebsiteURL}</a></span></li>
+                                    </ul>
+                                </div>*@
 
                         </div>
                         <!-- END PROFILE DETAIL -->
@@ -124,43 +125,25 @@
                     <div class="profile-right">
                         <h4 class="heading">Groups</h4>
                         <!-- AWARDS -->
-                        <div class="awards">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
-                                        <div class="hexagon">
-                                            <span class="lnr lnr-sun award-icon"></span>
+                        @*@model IEnumerable<MyNetwork.Models.ContactGroup>
+                        @foreach (var item in Model)
+                        {
+                            <div class="awards">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="award-item">
+                                            <div class="hexagon">
+                                                <span class="lnr lnr-sun award-icon"></span>
+                                            </div>
+                                            <span>@item.Group</span>
                                         </div>
-                                        <span>Most Bright Idea</span>
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
-                                        <div class="hexagon">
-                                            <span class="lnr lnr-clock award-icon"></span>
-                                        </div>
-                                        <span>Most On-Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
-                                        <div class="hexagon">
-                                            <span class="lnr lnr-magic-wand award-icon"></span>
-                                        </div>
-                                        <span>Problem Solver</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
-                                        <div class="hexagon">
-                                            <span class="lnr lnr-heart award-icon"></span>
-                                        </div>
-                                        <span>Most Loved</span>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+
+                                </div>
+
+                            </div>
+                        }*@
                         <!-- END AWARDS -->
                         <!-- TABBED CONTENT -->
 
@@ -169,7 +152,7 @@
                             <div class="profile-info">
                                 <h4 class="heading">Notes</h4>
                                 <textarea rows="10" cols="135" name="notes">
-
+                                @ViewBag.Notes
                                 </textarea>
                             </div>
 

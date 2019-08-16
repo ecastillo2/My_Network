@@ -74,7 +74,7 @@ namespace MyNetwork.DAL
                         TwitterURL = Convert.ToString(dt["TwitterURL"]),
                         CompanyName = Convert.ToString(dt["CompanyName"]),
                         CompanyAddress = Convert.ToString(dt["CompanyAddress"]),
-                        Greek = Convert.ToString(dt["Greek"]),
+                       
                         CollegeAttended = Convert.ToString(dt["CollegeAttended"]),
                         HighSchoolAttended = Convert.ToString(dt["HighSchoolAttended"]),
                         Degree = Convert.ToString(dt["Degree"]),
@@ -93,7 +93,10 @@ namespace MyNetwork.DAL
                         BusinessCardFrontImg = Convert.ToString(dt["BusinessCardFrontImg"]),
                         BusinessCardBackImg = Convert.ToString(dt["BusinessCardBackImg"]),
                         Personality = Convert.ToString(dt["Personality"]),
-                        Notes = Convert.ToString(dt["Notes"]),                       
+                        Notes = Convert.ToString(dt["Notes"]),
+
+                       
+
                     });
 
                 }
@@ -149,7 +152,7 @@ namespace MyNetwork.DAL
             cmd.Parameters.AddWithValue("@TwitterURL", contactInput.TwitterURL);
             cmd.Parameters.AddWithValue("@CompanyName", contactInput.CompanyName);
             cmd.Parameters.AddWithValue("@CompanyAddress", contactInput.CompanyAddress);
-            cmd.Parameters.AddWithValue("@Greek", contactInput.Greek);
+            //cmd.Parameters.AddWithValue("@Greek", contactInput.Group);
             cmd.Parameters.AddWithValue("@CollegeAttended", contactInput.CollegeAttended);
             cmd.Parameters.AddWithValue("@HighSchoolAttended", contactInput.HighSchoolAttended);
             cmd.Parameters.AddWithValue("@Degree", contactInput.Degree);
@@ -249,7 +252,7 @@ namespace MyNetwork.DAL
                     SelectedContacts.TwitterURL = Convert.ToString(dt["TwitterURL"]);
                     SelectedContacts.CompanyName = Convert.ToString(dt["CompanyName"]);
                     SelectedContacts.CompanyAddress = Convert.ToString(dt["CompanyAddress"]);
-                    SelectedContacts.Greek = Convert.ToString(dt["Greek"]);
+                   // SelectedContacts.Group = Convert.ToString(dt["Group"]);
                     SelectedContacts.CollegeAttended = Convert.ToString(dt["CollegeAttended"]);
                     SelectedContacts.HighSchoolAttended = Convert.ToString(dt["HighSchoolAttended"]);
                     SelectedContacts.Degree = Convert.ToString(dt["Degree"]);
