@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using MyNetwork.Models;
 using MyNetwork.DAL;
 using MyNetwork.Services;
-
+using System.IO;
 
 namespace MyNetwork.Controllers
 {
@@ -14,6 +14,7 @@ namespace MyNetwork.Controllers
     public class ContactsController : Controller
     {
         // GET: Contacts
+
         Image ig = new Image();
         ImageUpload uploadImageFun = new ImageUpload();
         ContactGroup gp = new ContactGroup();
@@ -184,49 +185,63 @@ namespace MyNetwork.Controllers
 
             return View("UpdateContact", "_LoggedIn");
         }
-
-        public ActionResult UploadImage(string profileImage, string frontBCImage, string backBCImage, string ContactID)
+        [HttpPost]
+        public ActionResult ViewContact(HttpPostedFileBase profileImage, HttpPostedFileBase frontBCImage, HttpPostedFileBase backBCImage, string ContactID)
         {
-
+            
 
             string imageType;
 
-            if (string.IsNullOrEmpty(profileImage) == true)
+            if (profileImage == null)
+            {
+
+
+            }
+            else
             {
                 imageType = "profileImage";
 
                 ig.ImageType = imageType;
-                ig.Title = profileImage;
-                ig.ImagePath = "";
-
+                ig.Title = profileImage.FileName;
+                ig.ImagePath = "~/UI/Images/ProfileImages/" + profileImage.FileName;
+                profileImage.SaveAs(Path.Combine(Server.MapPath("~/UI/Images/ProfileImages"), profileImage.FileName));
 
                 uploadImageFun.SaveImage(ig, ContactID);
+            }
+
+
+            if (frontBCImage == null )
+            {
+                
 
             }
-            if (string.IsNullOrEmpty(frontBCImage) == true)
+            else
             {
                 imageType = "frontBCImage";
 
                 ig.ImageType = imageType;
-                ig.Title = frontBCImage;
-                ig.ImagePath = "";
+                ig.Title = frontBCImage.FileName;
+                ig.ImagePath = Path.Combine(Server.MapPath("~/UI/Images/ProfileImages"), frontBCImage.FileName);
 
 
                 uploadImageFun.SaveImage(ig, ContactID);
 
+            }
+            if (backBCImage == null)
+            {
+               
 
             }
-            if (string.IsNullOrEmpty(backBCImage) == true)
-            {
+            else
+                {
                 imageType = "backBCImage";
 
                 ig.ImageType = imageType;
-                ig.Title = backBCImage;
-                ig.ImagePath = "";
+                ig.Title = backBCImage.FileName;
+                ig.ImagePath = Path.Combine(Server.MapPath("~/UI/Images/ProfileImages"), backBCImage.FileName);
 
 
                 uploadImageFun.SaveImage(ig, ContactID);
-
             }
 
             return View("ViewContact", "_LoggedIn");
