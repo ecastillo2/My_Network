@@ -8,7 +8,7 @@ namespace MyNetwork.Models
     public class Contact
     {
 
-        private static string _ContactID;
+        private  string _ContactID;
         public string ContactID
         {
             get { return _ContactID; }
@@ -132,6 +132,13 @@ namespace MyNetwork.Models
         {
             get { return _SalaryRange; }
             set { _SalaryRange = value; }
+        }
+
+        private string _Group;
+        public string Group
+        {
+            get { return _Group; }
+            set { _Group = value; }
         }
 
         private string _PrimaryOccupation;

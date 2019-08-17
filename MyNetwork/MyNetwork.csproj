@@ -2138,7 +2138,6 @@
     <Content Include="UI\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="UI\vendor\jquery\jquery.min.map" />
     <Content Include="UI\vendor\jquery\jquery.slim.min.map" />
-    <Content Include="Views\Contacts\UpdateContact.cshtml" />
     <Content Include="UI\homePage\assets\fonts\fontawesome-webfont.eot" />
     <Content Include="UI\homePage\assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="UI\homePage\assets\fonts\fontawesome-webfont.woff" />
@@ -2148,6 +2147,7 @@
     <Content Include="UI\homePage\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="UI\homePage\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="UI\homePage\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Contacts\UpdateContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
