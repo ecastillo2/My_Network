@@ -196,7 +196,7 @@ namespace MyNetwork.DAL
             SqlConnection sqlConn;
             sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBconnection"].ConnectionString);
             sqlConn.Open();
-            SqlCommand cmd = new SqlCommand("SP_DeletContact", sqlConn);
+            SqlCommand cmd = new SqlCommand("SP_DeleteContact", sqlConn);
             cmd.CommandType = CommandType.StoredProcedure;
 
 
