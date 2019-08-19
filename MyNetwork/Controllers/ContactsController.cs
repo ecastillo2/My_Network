@@ -211,7 +211,7 @@ namespace MyNetwork.Controllers
             ViewBag.ContactID = SelectedContact.ContactID;
             ViewBag.AddedContactDate = SelectedContact.AddedContactDate;
             ViewBag.Category = SelectedContact.Category;
-            //ViewBag.FirstName = SelectedContact.FirstName;
+            ViewBag.FirstName = SelectedContact.FirstName;
             ViewBag.LastName = SelectedContact.LastName;
             ViewBag.Age = SelectedContact.Age;
             ViewBag.Birthday = SelectedContact.Birthday;
@@ -249,7 +249,7 @@ namespace MyNetwork.Controllers
 
             
 
-            return View("UpdateContact", "_LoggedIn", SelectedGroup.Group.ToList());
+            return View("UpdateContact", "_LoggedIn");
         }
 
         
@@ -542,7 +542,7 @@ namespace MyNetwork.Controllers
 
 
 
-            return View("UpdateContact", "_LoggedIn");
+            return RedirectToAction("Contacts", "Contacts");
         }
     }
 

@@ -68,7 +68,13 @@
                                         <h3 class="panel-title">Profile</h3>
                                     </div>
                                     <div class="panel-body">
-                                        <input type="text" class="form-control" name="category" placeholder="Category" value="@ViewBag.category">
+                                        <select placeholder="Category" name="Category" class="form-control">
+                                            <option value="volvo">@ViewBag.Category</option>
+                                            <option value="volvo">Volvo</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
                                         <br>
                                         <input type="text" class="form-control" name="firstName" placeholder="First Name" value="@ViewBag.firstName" required>
                                         <br>
@@ -85,7 +91,7 @@
                                         <input type="text" class="form-control" name="primaryPhoneNumber" placeholder="Primary Phone Number" value="@ViewBag.primaryPhoneNumber">
                                         <br>
                                         <input type="text" class="form-control" name="secondaryPhoneNumber" placeholder="Secondary Phone Number" value="@ViewBag.secondaryPhoneNumber">
-                                       
+
                                         <input type="text" class="form-control" name="relationship" placeholder="Relationship" value="@ViewBag.Relationship">
                                         <br>
                                         <input type="text" class="form-control" name="hobbies" placeholder="Hobbies" value="@ViewBag.hobbies">
