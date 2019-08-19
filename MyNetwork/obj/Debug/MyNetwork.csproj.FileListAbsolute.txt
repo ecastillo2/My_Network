@@ -225,4 +225,3 @@ C:\Repository\My_Network\MyNetwork\obj\Debug\MyNetwork.csproj.CoreCompileInputs.
 C:\Repository\My_Network\MyNetwork\obj\Debug\MyNetwork.csproj.CopyComplete
 C:\Repository\My_Network\MyNetwork\obj\Debug\MyNetwork.dll
 C:\Repository\My_Network\MyNetwork\obj\Debug\MyNetwork.pdb
-C:\Repository\My_Network\MyNetwork\obj\Debug\MyNetwork.csprojAssemblyReference.cache

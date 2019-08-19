@@ -132,20 +132,20 @@
                             <!-- RIGHT COLUMN -->
                     <div class="profile-right">
                         @*<h4 class="heading">Business Card</h4>
-                        <form action="" method="post" enctype="multipart/form-data">
-                            
+        <form action="" method="post" enctype="multipart/form-data">
 
 
-                            <label for="male">Profile Image</label> <input type="file" name="profileImage" id="file" value="1" /><input type="submit" value="Save" name="file" class="btn btn-primary">
-                            <br />
-                            <label for="male">Front Business Card</label> <input type="file"  name="frontBCImage"> <input type="submit" value="Save" name="frontBCImage" class="btn btn-primary">
-                            <br />
-                            <label for="male">Back Business Card</label> <input type="file"  name="backBCImage"> <input type="submit" value="Save" name="backBCImage" class="btn btn-primary">
 
-                            </form>*@
+            <label for="male">Profile Image</label> <input type="file" name="profileImage" id="file" value="1" /><input type="submit" value="Save" name="file" class="btn btn-primary">
+            <br />
+            <label for="male">Front Business Card</label> <input type="file"  name="frontBCImage"> <input type="submit" value="Save" name="frontBCImage" class="btn btn-primary">
+            <br />
+            <label for="male">Back Business Card</label> <input type="file"  name="backBCImage"> <input type="submit" value="Save" name="backBCImage" class="btn btn-primary">
 
-                            <!-- AWARDS -->
-                            @*@model IEnumerable<MyNetwork.Models.ContactGroup>
+            </form>*@
+
+                        <!-- AWARDS -->
+                        @*@model IEnumerable<MyNetwork.Models.ContactGroup>
         @foreach (var item in Model)
         {
             <div class="awards">
@@ -164,33 +164,39 @@
 
             </div>
         }*@
-                            <!-- END AWARDS -->
-                            <!-- TABBED CONTENT -->
+                        <!-- END AWARDS -->
+                        <!-- TABBED CONTENT -->
+                        @using (Html.BeginForm("deleteContact", "Contacts", new { ContactID = @ViewBag.ContactID }, FormMethod.Post))
+                        {
+                            
+                                <input type="submit" value="Delete Contact" name="" class="btn btn-danger">
 
-                            <div class="profile-detail">
+                           
+                        }
+                        <div class="profile-detail">
 
-                                <div class="profile-info">
-                                    <h4 class="heading">Notes</h4>
-                                    <textarea rows="10" cols="135" name="notes">
+                            <div class="profile-info">
+                                <h4 class="heading">Notes</h4>
+                                <textarea rows="10" cols="135" name="notes">
                                 @ViewBag.Notes
                                 </textarea>
-                                </div>
-
-                                <div class="profile-info">
-                                    <h4 class="heading">Notifications</h4>
-                                    <ul class="list-unstyled list-justify">
-                                        <li>Notify me if last contacted was more that a month:  <span>{item.Birthdy}</span></li>
-                                        <li>Notify me my contacts birthdays:  <span>{item.Phone}</span></li>
-                                        <li>Notify me suggestions to build my network:  <span>{item.Phone}</span></li>
-                                        <li>Notify me to follow up on:  <span>{Date}</span></li>
-
-                                    </ul>
-                                </div>
                             </div>
 
+                            <div class="profile-info">
+                                <h4 class="heading">Notifications</h4>
+                                <ul class="list-unstyled list-justify">
+                                    <li>Notify me if last contacted was more that a month:  <span>{item.Birthdy}</span></li>
+                                    <li>Notify me my contacts birthdays:  <span>{item.Phone}</span></li>
+                                    <li>Notify me suggestions to build my network:  <span>{item.Phone}</span></li>
+                                    <li>Notify me to follow up on:  <span>{Date}</span></li>
 
-                            <!-- END TABBED CONTENT -->
-</div>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- END TABBED CONTENT -->
+                    </div>
                             <!-- END RIGHT COLUMN -->
                         </div>
             </div>

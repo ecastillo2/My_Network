@@ -544,6 +544,17 @@ namespace MyNetwork.Controllers
 
             return RedirectToAction("Contacts", "Contacts");
         }
+
+
+        public ActionResult deleteContact(string ContactID)
+        {
+            Items.DeleteContacts(ContactID);
+            
+
+
+            return RedirectToAction("Contacts", "Contacts");
+        }
+
     }
 
    

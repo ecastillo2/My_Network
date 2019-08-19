@@ -187,8 +187,27 @@ namespace MyNetwork.DAL
         }
 
         //Delete Contact
-        public string DeleteContacts(string ContactID, string UserId)
+        public string DeleteContacts(string ContactID)
         {
+            string validateEmail = string.Empty;
+            Contact ContactInfo = new Contact();
+
+            //SqlDataAdapter Adapter;
+            SqlConnection sqlConn;
+            sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBconnection"].ConnectionString);
+            sqlConn.Open();
+            SqlCommand cmd = new SqlCommand("SP_DeletContact", sqlConn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            cmd.Parameters.AddWithValue("@ContactID", ContactID);
+
+          
+            cmd.ExecuteScalar();
+
+
+            sqlConn.Close();
+
             return null;
         }
 
