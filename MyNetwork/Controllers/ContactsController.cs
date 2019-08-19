@@ -211,7 +211,7 @@ namespace MyNetwork.Controllers
             ViewBag.ContactID = SelectedContact.ContactID;
             ViewBag.AddedContactDate = SelectedContact.AddedContactDate;
             ViewBag.Category = SelectedContact.Category;
-            ViewBag.FirstName = SelectedContact.FirstName;
+            //ViewBag.FirstName = SelectedContact.FirstName;
             ViewBag.LastName = SelectedContact.LastName;
             ViewBag.Age = SelectedContact.Age;
             ViewBag.Birthday = SelectedContact.Birthday;
@@ -246,6 +246,8 @@ namespace MyNetwork.Controllers
             ViewBag.BusinessCardBackImg = SelectedContact.BusinessCardBackImg;
             ViewBag.Personality = SelectedContact.Personality;
             ViewBag.Notes = SelectedContact.Notes;
+
+            
 
             return View("UpdateContact", "_LoggedIn", SelectedGroup.Group.ToList());
         }
@@ -429,13 +431,13 @@ namespace MyNetwork.Controllers
         }
 
 
-        public ActionResult UpdateContactInfo(string ContactID, string category, string firstNamea, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating, FormCollection group)
+        public ActionResult UpdateContactInfo(string ContactID, string category, string firstName, string lastName, string age, string birthday, string primaryPhone, string secondaryPhone, string workPhone, string relationship, string spouseFirstName, string spouseLastName, string primaryOccupation, string secondaryOccupation, string metLocation, string numberOfYearKnown, string lastSpokeToDate, string websiteURL, string linkedInURL, string faceBookURL, string instagramURL, string twitterURL, string companyName, string companyAddress, string greek, string collegeAttened, string highSchoolAttened, string degreee, string relationshipStatus, string hobbies, string primaryAddress, string secondaryAddress, string inSchool, string hasPets, string hasSiblings, string fatherFirstName, string fatherLastName, string motherFirstName, string motherLastName, string skill, string businessCardFrontImg, string businessCardBackImg, string personality, string notes, string salaryRange, string email, string rating, FormCollection group)
         {
 
             #region add contact to class     
             //updateContact.ContactID = category;
             updatedContact.Category = category;
-            updatedContact.FirstName = firstNamea;
+            updatedContact.FirstName = firstName;
             updatedContact.LastName = lastName;
             updatedContact.Age = age;
             updatedContact.Birthday = birthday;
