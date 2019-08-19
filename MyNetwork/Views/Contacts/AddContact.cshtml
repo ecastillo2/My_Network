@@ -68,7 +68,13 @@
                                         <h3 class="panel-title">Profile</h3>
                                     </div>
                                     <div class="panel-body">
-                                        <input type="text" class="form-control" name="category" placeholder="Category">
+                                        <select placeholder="Category" name="Category" class="form-control">
+                                            
+                                            <option value="Friend">Friend</option>
+                                            <option value="Associate">Associate</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
                                         <br>
                                         <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
                                         <br>
@@ -92,23 +98,7 @@
                                         <br>
                                         <input type="text" class="form-control" name="hobbies" placeholder="Hobbies">
                                         <br>
-                                        <form method="post">
-                                            <table id="formTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>group</th>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><input type="text" name="group" /></td>
-
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </form>
-                                        <br>
+                                       
                                         Rating: <input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0">
                                     </div>
                                 </div>
@@ -126,8 +116,7 @@
                                         <input type="text" class="form-control" name="instagramURL" placeholder="InstagramURL">
                                         <br>
                                         <input type="text" class="form-control" name="twitterURL" placeholder="TwitterURL">
-                                        <br>
-                                        <input type="text" class="form-control" name="socialGroups" placeholder="Social Groups">
+                                        
 
                                     </div>
                                 </div>
@@ -141,6 +130,38 @@
                                         <h3 class="panel-title">Occupation</h3>
                                     </div>
                                     <div class="panel-body">
+                                        <select placeholder="Industry" name="Industry" class="form-control">
+
+                                            <option value="Accounting">Accounting</option>
+                                            <option value="Administration & Office Support">Administration & Office Support</option>
+                                            <option value="Advertising, Arts & Media">Advertising, Arts & Media</option>
+                                            <option value="Banking & Financial Services">Banking & Financial Services</option>
+                                            <option value="Call Centre & Customer Service">Call Centre & Customer Service</option>
+                                            <option value="Community Services & Development">Community Services & Development</option>
+                                            <option value="Construction">Construction</option>
+                                            <option value="Consulting & Strategy">Consulting & Strategy</option>
+                                            <option value="Design & Architechture">Design & Architechture</option>
+                                            <option value="Education & Training">Education & Training</option>
+                                            <option value="Engineering">Engineering</option>
+                                            <option value="Farming, Animals & Conservation">Farming, Animals & Conservation</option>
+                                            <option value="Government & Defence">Government & Defence</option>
+                                            <option value="Healthcare & Medical">Healthcare & Medical</option>
+                                            <option value="Hospitality & Tourism">Hospitality & Tourism</option>
+                                            <option value="Human Resources & Recruitment">Human Resources & Recruitment</option>
+                                            <option value="Information & Communication Technology">Information & Communication Technology</option>
+                                            <option value="Insurance & Superannuation">Insurance & Superannuation</option>
+                                            <option value="Legal">Legal</option>
+                                            <option value="Manufacturing, Transport & Logistics">Manufacturing, Transport & Logistics</option>
+                                            <option value="Marketing & Communications">Marketing & Communications</option>
+                                            <option value="Mining, Resources & Energy">Mining, Resources & Energy</option>
+                                            <option value="Real Estate & Property">Real Estate & Property</option>
+                                            <option value="Retail & Consumer Products">Retail & Consumer Products</option>
+                                            <option value="Sales">Sales</option>
+                                            <option value="Science & Technology">Science & Technology</option>
+                                            <option value="Sport & Recreation">Sport & Recreation</option>
+                                            <option value="Trades & Services">Trades & Services</option>
+                                        </select>
+                                        <br />
                                         <input type="text" class="form-control" name="primaryOccupation" placeholder="Primary Occupation">
                                         <br>
                                         <input type="text" class="form-control" name="secondaryOccupation" placeholder="Secondary Occupation">
@@ -153,9 +174,7 @@
                                         <br>
                                         <input type="text" class="form-control" name="skill" placeholder="Skill">
                                         <br>
-                                        <input type="text" class="form-control" name="businessCardFrontImg" placeholder="Business Card Front Img">
-                                        <br>
-                                        <input type="text" class="form-control" name="businessCardBackImg" placeholder="Business Card Back Img">
+
 
                                     </div>
                                 </div>
