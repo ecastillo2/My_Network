@@ -68,52 +68,89 @@
                                         <h3 class="panel-title">Profile</h3>
                                     </div>
                                     <div class="panel-body">
+                                        <label for="Category">Category</label>
                                         <select placeholder="Category" name="Category" class="form-control">
-                                            <option value="volvo">@ViewBag.Category</option>
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
+
+                                            <option value="Friend">Friend</option>
+                                            <option value="Associate">Associate</option>
+
+
                                         </select>
                                         <br>
+
+                                        <label for="First Name">First Name</label>
                                         <input type="text" class="form-control" name="firstName" placeholder="First Name" value="@ViewBag.firstName" required>
+
                                         <br>
+
+                                        <label for="Last Name">Last Name</label>
                                         <input type="text" class="form-control" name="lastName" placeholder="Last Name" value="@ViewBag.lastName">
+
                                         <br>
-                                        <input type="text" class="form-control" name="age" placeholder="Age" value="@ViewBag.age">
+                                        <label for="Age">Age</label>
+
+                                        <select placeholder="Age" name="Age" class="form-control">
+                                            <option value="volvo">@ViewBag.Age</option>
+                                            <option value="20 - 25">20 - 25</option>
+                                            <option value="25 - 30">25 - 30</option>
+                                            <option value="30 - 35">30 - 35</option>
+                                            <option value="40 - 45">40 - 45</option>
+                                            <option value="50 - 55">50 - 55</option>
+                                            <option value="60 - 65">60 - 65</option>
+                                            <option value="70 - 75">70 - 75</option>
+                                            <option value="80 - 85">80 - 85</option>
+                                            <option value="90 - 95">90 - 95</option>
+                                        </select>
+
                                         <br>
+                                        <label for="birthday">Birthday</label>
                                         <div class="form-group">
 
                                             <input type="date" name="birthday" min="1000-01-01"
                                                    max="3000-12-31" class="form-control" value="@ViewBag.birthday">
                                         </div>
+
                                         <br>
+
+                                        <label for="Primary Phone Number">Primary Phone Number</label>
                                         <input type="text" class="form-control" name="primaryPhoneNumber" placeholder="Primary Phone Number" value="@ViewBag.primaryPhoneNumber">
+
                                         <br>
+
+                                        <label for="Secondary Phone Number">Secondary Phone Number</label>
                                         <input type="text" class="form-control" name="secondaryPhoneNumber" placeholder="Secondary Phone Number" value="@ViewBag.secondaryPhoneNumber">
 
+                                        <br />
+
+                                        <label for="Relationship">Relationship</label>
                                         <input type="text" class="form-control" name="relationship" placeholder="Relationship" value="@ViewBag.Relationship">
+
                                         <br>
+
+                                        <label for="Hobbies">Hobbies</label>
                                         <input type="text" class="form-control" name="hobbies" placeholder="Hobbies" value="@ViewBag.hobbies">
-                                        <br>
-                                        <form method="post">
-                                            <table id="formTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>group</th>
 
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><input type="text" name="group" /></td>
-
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </form>
                                         <br>
-                                        Rating: <input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0">
+                                        @*<form method="post">
+            <table id="formTable">
+                <thead>
+                    <tr>
+                        <th>group</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="group" /></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <br>*@
+                                        <label for="Rating">Rating</label>
+                                        <input type="number" class="rating" id="test" name="rating" data-min="1" data-max="5" value="0">
+                                    
                                     </div>
                                 </div>
                                 <!-- END BUTTONS -->
@@ -123,14 +160,28 @@
                                         <h3 class="panel-title">Social</h3>
                                     </div>
                                     <div class="panel-body">
+
+                                        <label for="LinkedInURL">LinkedInURL</label>
                                         <input type="text" class="form-control" name="linkedInURL" placeholder="LinkedInURL" value="@ViewBag.linkedInURL">
+                                        
                                         <br>
+                                        
+                                        <label for="LinkedInURL">FaceBookURL</label>
                                         <input type="text" class="form-control" name="faceBookURL" placeholder="FaceBookURL" value="@ViewBag.faceBookURL">
+                                        
                                         <br>
+                                        
+                                        <label for="LinkedInURL">InstagramURL</label>
                                         <input type="text" class="form-control" name="instagramURL" placeholder="InstagramURL" value="@ViewBag.instagramURL">
+                                        
                                         <br>
+                                        
+                                        <label for="TwitterURL">InstagramURL</label>
                                         <input type="text" class="form-control" name="twitterURL" placeholder="TwitterURL" value="@ViewBag.twitterURL">
+                                        
                                         <br>
+                                        
+                                        <label for="socialGroups">Social Groups</label>
                                         <input type="text" class="form-control" name="socialGroups" placeholder="Social Groups" value="@ViewBag.socialGroups">
 
                                     </div>
@@ -145,21 +196,30 @@
                                         <h3 class="panel-title">Occupation</h3>
                                     </div>
                                     <div class="panel-body">
+
+                                        <label for="primaryOccupation">Primary Occupation</label>
                                         <input type="text" class="form-control" name="primaryOccupation" placeholder="Primary Occupation" value="@ViewBag.primaryOccupation">
+
                                         <br>
+
+                                        <label for="Secondary Occupation">Secondary Occupation</label>
                                         <input type="text" class="form-control" name="secondaryOccupation" placeholder="Secondary Occupation" value="@ViewBag.secondaryOccupation">
                                         <br>
-                                        <input type="text" class="form-control" name="companyName" placeholder="Company Name" value="@ViewBag.companyName"> 
+                                        <label for="CompanyName">Company Name</label>
+                                        <input type="text" class="form-control" name="companyName" placeholder="Company Name" value="@ViewBag.companyName">
                                         <br>
+                                        <label for="CompanyAddress">Company Address</label>
                                         <input type="text" class="form-control" name="companyAddress" placeholder="Company Address" value="@ViewBag.companyAddress">
                                         <br>
+                                        <label for="SalaryRange">Salary Range</label>
                                         <input type="text" class="form-control" name="salaryRange" placeholder="SalaryRange" value="@ViewBag.salaryRange">
                                         <br>
+                                        <label for="Skill">Skill</label>
                                         <input type="text" class="form-control" name="skill" placeholder="Skill" value="@ViewBag.skill">
                                         @*<br>
-                                        <input type="text" class="form-control" name="businessCardFrontImg" placeholder="Business Card Front Img" value="@ViewBag.socialGroups">
-                                        <br>
-                                        <input type="text" class="form-control" name="businessCardBackImg" placeholder="Business Card Back Img" value="@ViewBag.socialGroups">*@
+        <input type="text" class="form-control" name="businessCardFrontImg" placeholder="Business Card Front Img" value="@ViewBag.socialGroups">
+        <br>
+        <input type="text" class="form-control" name="businessCardBackImg" placeholder="Business Card Back Img" value="@ViewBag.socialGroups">*@
 
                                     </div>
                                 </div>
@@ -170,14 +230,19 @@
                                         <h3 class="panel-title">Peronal</h3>
                                     </div>
                                     <div class="panel-body">
+                                        <label for="MetLocation">Met Location</label>
                                         <input type="text" class="form-control" name="metLocation" placeholder="Met Location" value="@ViewBag.metLocation">
                                         <br>
+                                        <label for="numberOfYearKnown">Number Of Year Known</label>
                                         <input type="text" class="form-control" name="numberOfYearKnown" placeholder="Number Of Year Known" value="@ViewBag.numberOfYearKnown">
                                         <br>
-                                        <input type="text" class="form-control" name="lastSpokeToDate" placeholder="Last Spoke To Date" value="@ViewBag.lastSpokeToDate"> 
+                                        <label for="lastSpokeToDate">Last Spoke To Date</label>
+                                        <input type="text" class="form-control" name="lastSpokeToDate" placeholder="Last Spoke To Date" value="@ViewBag.lastSpokeToDate">
                                         <br>
+                                        <label for="Personality">Personality</label>
                                         <input type="text" class="form-control" name="personality" placeholder="Personality" value="@ViewBag.personality">
                                         <br>
+                                        <label for="Relationship Status">Relationship Status</label>
                                         <input type="text" class="form-control" name="relationshipStatus" placeholder="Relationship Status" value="@ViewBag.relationshipStatus">
 
                                     </div>
@@ -189,14 +254,19 @@
                                         <h3 class="panel-title">Education</h3>
                                     </div>
                                     <div class="panel-body">
+                                        <label for="InSchool">In School</label>
                                         <input type="text" class="form-control" name="inSchool" placeholder="In School" value="@ViewBag.inSchool">
                                         <br>
+                                        <label for="CollegeAttended">College Attended</label>
                                         <input type="text" class="form-control" name="collegeAttened" placeholder="College Attended" value="@ViewBag.collegeAttened">
                                         <br>
+                                        <label for="HighSchool ttended">HighSchool Attended</label>
                                         <input type="text" class="form-control" name="highSchoolAttened" placeholder="HighSchool Attended" value="@ViewBag.highSchoolAttened">
                                         <br>
+                                        <label for="Degree">Degree</label>
                                         <input type="text" class="form-control" name="degree" placeholder="Degree" value="@ViewBag.degree">
                                         <br>
+                                        <label for="Personality">Personality</label>
                                         <input type="text" class="form-control" name="personality" placeholder="Personality" value="@ViewBag.personality">
 
                                     </div>
